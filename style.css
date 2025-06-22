@@ -1,0 +1,110 @@
+/* Overall page styles: center calculator vertically & horizontally */
+body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Calculator container styling */
+.calculator {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+  width: fit-content;
+}
+
+/* Display input box styling */
+#display {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  color: white;
+  text-align: right; 
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow-x: auto; 
+}
+
+/* Container holding main buttons and extra buttons side by side */
+.main-area {
+  display: flex;
+  gap: 15px; 
+}
+
+/* Grid for main number/operator buttons (4 columns) */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 10px;
+}
+
+/* Grid for extra feature buttons (2 columns) */
+.extra-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
+  grid-gap: 10px;
+}
+
+/* Base button styles */
+button {
+  padding: 18px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background: #444;
+}
+
+/* Button press (active) effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* '0' button spans 2 columns to be wider */
+.zero {
+  grid-column: span 2;
+}
+
+/* Equals button spans 2 rows vertically for emphasis */
+#equals {
+  grid-row: span 2;
+  height: calc(100% + 10px); 
+}
+
+/* Special buttons styling (Clear 'C' and Equals '=') */
+.special {
+  background: #e91e63;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hover effect for special buttons */
+.special:hover {
+  background: #ff2a72;
+}
+
+/* Backspace button distinct color */
+#back {
+  background-color: #555;
+  font-weight: bold;
+}
+
+/* Hover effect for backspace */
+#back:hover {
+  background-color: #777;
+}

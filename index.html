@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Main calculator block -->
+    <div class="calculator">
+        <input type="text" id="display" disabled />
+        <!-- Calculator number and operations buttons -->
+        <div class="main-area">
+            <div class="button-grid">
+                <button onclick="clearDisplay()" id="clear" class="special">C</button>
+                <button onclick="appendValue('/')" id="divide">÷</button>
+                <button onclick="appendValue('*')" id="multiply">×</button>
+                <button onclick="backspace()" id="back">⌫</button>
+                
+
+                <button onclick="appendValue('7')" id="seven">7</button>
+                <button onclick="appendValue('8')" id="eight">8</button>
+                <button onclick="appendValue('9')" id="nine">9</button>
+                <button onclick="appendValue('-')" id="subtract">-</button>
+                
+
+                <button onclick="appendValue('4')" id="four">4</button>
+                <button onclick="appendValue('5')" id="five">5</button>
+                <button onclick="appendValue('6')" id="six">6</button>
+                <button onclick="appendValue('+')" id="add">+</button>
+
+                <button onclick="appendValue('1')" id="one">1</button>
+                <button onclick="appendValue('2')" id="two">2</button>
+                <button onclick="appendValue('3')" id="three">3</button>
+                <button onclick="calculateResult()" id="equals" class="special">=</button>
+                <button onclick="appendValue('0')" id="zero" class="zero">0</button>
+                <button onclick="appendValue('.')">.</button>
+            </div>
+
+            <!-- Memory Function buttons and extra ones -->
+            <div class="extra-buttons">
+                <button onclick="calculateSquareRoot()">√</button>
+                <button onclick="handlePercentage()">%</button>
+                <button onclick="memoryAdd()">M+</button>
+                <button onclick="memorySubtract()">M-</button>
+                <button onclick="memoryRecall()">MR</button>
+                <button onclick="memoryClear()">MC</button>
+            </div>
+        </div>
+    </div>
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+</body>
